@@ -1,0 +1,10 @@
+#!name = QQ音乐去广告 #!desc = 屏蔽 QQ音乐 iOS 开屏/启动/弹窗广告与相关统计上报（域名级 REJECT，无需 MITM，不改动核心接口） #!author = 整合自社区开源规则 zqzess / wx2422042349-wq #!system = iOS,iPadOS #!loon_version = 3.5.1(978) #!tag = 去广告,音乐
+[Rule]
+—— 腾讯音乐广告域 ——
+DOMAIN,ad.tencentmusic.com,REJECT DOMAIN,adcdn.tencentmusic.com,REJECT DOMAIN,adstats.tencentmusic.com,REJECT DOMAIN,adexpo.tencentmusic.com,REJECT DOMAIN,adclick.tencentmusic.com,REJECT
+—— QQ音乐 广告/推广接口 ——
+DOMAIN,tmead.y.qq.com,REJECT
+—— 腾讯广告联盟 ——
+DOMAIN,sdk.e.qq.com,REJECT DOMAIN,tangram.e.qq.com,REJECT DOMAIN,p.l.qq.com,REJECT DOMAIN,us.l.qq.com,REJECT DOMAIN-SUFFIX,imtmp.net,REJECT
+—— 统计/埋点上报（不想要可整段注释） ——
+DOMAIN,monitor.music.qq.com,REJECT DOMAIN,stat.y.qq.com,REJECT DOMAIN,otheve.beacon.qq.com,REJECT DOMAIN,oth.str.mdt.qq.com,REJECT DOMAIN,h.trace.qq.com,REJECT
